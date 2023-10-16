@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <!-- app:layout_constraintBaseline_toTopOf="parent">
+-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_corner"
+            android:layout_margin="20dp"
+            android:padding="2dp"
+            >
+
+            <View
+                android:id="@+id/ColView"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+
+                />
+
+        </LinearLayout>
+
+<!--
+        <View
+
+            android:background="@drawable/round_corner"
+            android:id="@+id/ColView"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"/>
+
+-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <Switch
+                        android:id="@+id/RedSwitch"
+                        android:theme="@style/RedSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:track="@drawable/track_red"
+
+                        android:layout_marginTop="10dp"
+                        >
+
+                    </Switch>
+
+                    <Switch
+                        android:id="@+id/BlueSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:track="@drawable/track_blue"
+                        android:theme="@style/BlueSwitch"
+                        android:layout_marginTop="10dp">
+
+                    </Switch>
+
+                    <Switch
+                        android:id="@+id/GreenSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:track="@drawable/track_green"
+                        android:theme="@style/GreenSwitch"
+                        android:layout_marginTop="10dp">
+
+                    </Switch>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <SeekBar
+                        android:id="@+id/Red_seek"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:progressTint="@color/red"
+                        android:layout_marginTop="15dp"/>
+
+                    <SeekBar
+                        android:id="@+id/Blue_seek"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:progressTint="@color/blue"
+                        android:layout_marginTop="20dp"/>
+
+                    <SeekBar
+                        android:id="@+id/Green_seek"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:max="255"
+                        android:progressTint="@color/green"
+                        android:layout_marginTop="15dp"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp">
+
+
+                    <EditText
+                        android:background="@drawable/border"
+                        android:id="@+id/Red_View"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:background="@drawable/border"
+                        android:id="@+id/Blue_View"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:background="@drawable/border"
+                        android:id="@+id/Green_View"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:padding="2dp"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20dp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp">
+
+            <android.widget.Button
+                android:id="@+id/resetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_view"
+                android:paddingVertical="30dp"
+                android:paddingHorizontal="100dp"
+                android:text="Reset"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <!--
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:padding="20dp"
+
+                android:layout_margin="120dp"
+
+                android:paddingHorizontal="50dp"
+                android:textSize="30dp"
+                android:text="Reset"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                -->
+
+
+            </android.widget.Button>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RedSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb color (30% transparency) -->
+        <item name="colorControlActivated">#F19999</item>
+        <!--
+        #F19999
+        #F5B7B1
+
+        #85C1E9
+        #BBBDF7
+
+        #BAF5E8
+        #A9DFBF
+        -->
+    </style>
+
+    <style name="BlueSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#BBBDF7</item>
+    </style>
+
+    <style name="GreenSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#A9DFBF</item>
+    </style>
+</resources>
